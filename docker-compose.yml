@@ -10,8 +10,7 @@ services:
 
       DB_HOST: chokdisql-do-user-16212296-0.c.db.ondigitalocean.com
       DB_USER: doadmin
-      
-      DB_PASSWORD: 
+      DB_PASSWORD: AVNS_V1YkS6nuMywgDvGn8eN
       DB_DATABASE: Chokdi2
       DB_PORT: 25060
       SERVER_PORT: 5004
