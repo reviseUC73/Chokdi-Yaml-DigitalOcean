@@ -19,7 +19,7 @@ services:
     restart: always
 
   chokdi-frontend:
-    image: rew1234/chokdi-frontend:V4.0
+    image: rew1234/chokdi-frontend:V5.0
     ports:
       - "5005:5005"
     environment:
