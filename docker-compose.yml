@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   chokdi-backend:
-    image: rew1234/chokdi-backend:V3.0
+    image: rew1234/chokdi-backend:V4.0
     
     ports:
       - "5004:5004"
@@ -19,7 +19,7 @@ services:
     restart: always
 
   chokdi-frontend:
-    image: rew1234/chokdi-frontend:V3.0
+    image: rew1234/chokdi-frontend:V4.0
     ports:
       - "5005:5005"
     environment:
