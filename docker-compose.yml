@@ -1,0 +1,34 @@
+version: "3.9"
+
+services:
+  chokdi-backend:
+    image: rew1234/chokdi-backend:V3.0
+    
+    ports:
+      - "5004:5004"
+    environment:
+
+      DB_HOST: chokdisql-do-user-16212296-0.c.db.ondigitalocean.com
+      DB_USER: doadmin
+      DB_PASSWORD: AVNS_V1YkS6nuMywgDvGn8eN
+      DB_DATABASE: Chokdi2
+      DB_PORT: 25060
+      SERVER_PORT: 5004
+      JWT_SECRET: JWT_SECRET
+      ALLOW_REQUEST_IP: "http://159.89.194.31:5005" 
+    restart: always
+
+  chokdi-frontend:
+    image: rew1234/chokdi-frontend:V3.0
+    ports:
+      - "5005:5005"
+    environment:
+      SERVER_PORT: 5005
+      SERVER_HOST: "0.0.0.0"
+      VITE_API_PORT: 5004
+      VITE_API_HOST_IP: "159.89.194.31"     #YOOOO localhost -> not full aws url (chokdi)
+      VITE_GOOGLE_CLIENT_ID: 658254688251-57jm5pokhi21fcs72ecqo0e05u1dohku.apps.googleusercontent.com
+    depends_on:
+      - chokdi-backend
+
+# 159.89.194.31
