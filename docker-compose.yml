@@ -15,7 +15,7 @@ services:
       DB_PORT: 25060
       SERVER_PORT: 5004
       JWT_SECRET: JWT_SECRET
-      ALLOW_REQUEST_IP: "http://159.89.194.31:5005" 
+      ALLOW_REQUEST_IP: "http://www.chokdi.xyz:5005" 
     restart: always
 
   chokdi-frontend:
@@ -26,9 +26,10 @@ services:
       SERVER_PORT: 5005
       SERVER_HOST: "0.0.0.0"
       VITE_API_PORT: 5004
-      VITE_API_HOST_IP: "159.89.194.31"     #YOOOO localhost -> not full aws url (chokdi)
+      VITE_API_HOST_IP: "chokdi.xyz"     #YOOOO localhost -> not full aws url (chokdi)
       VITE_GOOGLE_CLIENT_ID: 658254688251-57jm5pokhi21fcs72ecqo0e05u1dohku.apps.googleusercontent.com
     depends_on:
       - chokdi-backend
 
-# 159.89.194.31
+
+# http://www.chokdi.xyz:5005/
